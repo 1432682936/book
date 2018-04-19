@@ -34,26 +34,31 @@
                             </nuxt-link>
                         </div>
                     </div>                    
-                    <button>登录</button>
+                    <button class="sign-in-btn">登录</button>
                 </form>
              
 
           <div class="more-sign">
               <p class="">社交账号登录</p>
               <ul>
-                  <li>
-                      <nuxt-link to="/">
-                      <i class="fa fa-weixin"></i>
-                      </nuxt-link>
-                  </li>
-                   <li>
+                  <li class="weibo">
                       <nuxt-link to="/">
                       <i class="fa fa-weibo"></i>
+                      </nuxt-link>
+                  </li>
+                   <li class="weixin">
+                      <nuxt-link to="/">
+                      <i class="fa fa-weixin"></i>
                       </nuxt-link> 
                   </li>
-                   <li>
+                   <li class="qq">
                       <nuxt-link to="/">
                       <i class="fa fa-qq"></i>
+                      </nuxt-link>                     
+                  </li>
+                  <li class="other">
+                      <nuxt-link to="/">
+                      <i>其他</i>
                       </nuxt-link>                     
                   </li>
               </ul>

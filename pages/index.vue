@@ -1,14 +1,31 @@
 <template>
-  <div>
-      <p>Hello world</p>
+  <div style="height: 100%">
+    <my-header></my-header>
+    <p>我的主体内容部分</p>
   </div>
 </template>
 <script>
-    export default{
-        data () {
-return{
-    name:'首页'
-}
-        }
+  import myHeader from '../components/myHeader.vue'
+  export default {
+    head:{
+      title:'简书-创作你的创作',
+      meta:[
+        {charset:'utf-8'},
+        {name:'keywords',content:'简书首页'},
+        {name:'description',content:'简书首页'},
+        {name:'author',count:'123'}
+      ]
+    },
+    components:{
+      myHeader,
+    },
+    data () {
+      return {
+        name:'首页'
+      }
     }
+  }
 </script>
+<style>
+
+</style>
