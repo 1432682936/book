@@ -11,9 +11,12 @@
                 
                   <div class="caidan">
                     <div @click="toggle()" class="shrink-btn" >
+                        <!--  <div @click="!shows=shows" class="shrink-btn" > -->
                     <i class="fa fa-bars"></i>
                     </div>
-                 <ul class="pull-down"  v-show="shows">
+                    <!-- transition 融合animated写   enter-active-class进入    leave离开    -->
+                       <transition enter-active-class="animated slideInDown" leave-active-class="animated fadeOutUp">
+                 <ul class="pull-down"  v-show="shows"> 
                    <li class="active">发现</li>
                    <li>关注</li>
                    <li>消息</li>
@@ -26,6 +29,7 @@
                             </form>
                         </li>
                  </ul>
+                     </transition>
                   </div>
               
                
@@ -37,7 +41,7 @@
                 </nuxt-link>
                 <!--登录用户信息-->
                 <div class="user" >
-                    <div class="drop-down">
+                    <div class="drop-down" @mouseover="userShow=true" @mouseleave="userShow=false">
                         <nuxt-link to="/u/123" class="avatar">
                             <img src="~assets/img/default-avatar.jpg">
                         </nuxt-link>
@@ -152,7 +156,6 @@
         toggle:function(){
           this.shows = !this.shows;
           console.log(this.shows)
-
           }
         }
     }
@@ -210,6 +213,7 @@
         background:#FFFFFF;
         text-align:center;
         cursor: pointer;
+  
     }
    nav .pull-down {
         position:absolute;
@@ -218,10 +222,12 @@
         min-width:160px;
         max-width: 768px;
         width: 100%;
-        height: 280px;
+        height: 230 px;
         z-index:2;
         margin-top:56px;
         padding:5px 0;
+       
+      
         
     }
 
@@ -232,6 +238,19 @@
         text-align: center;
         border-top: 1px solid #F0F0F0;
         cursor: pointer;
+    }
+          nav .pull-down li:hover {
+     background:#f5f5f5; 
+     
+        
+   
+    }
+
+  nav .pull-down .active {
+        color:#ea6f5a;
+        background:none!important
+        ;
+   
     }
 
     nav .pull-down li:nth-last-of-type(1) .ssearch-input {
@@ -247,9 +266,7 @@
     }
 
   .ssearch-input:focus ~ .ssearch-btn {
-   
    background: #969696;
- 
         color:#fff;
         border-radius: 50%;
     }
