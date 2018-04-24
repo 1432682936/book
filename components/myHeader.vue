@@ -225,7 +225,7 @@
         height: 230 px;
         z-index:2;
         margin-top:56px;
-        padding:5px 0;
+        padding: 0;
        
       
         
@@ -467,4 +467,32 @@
         }
 
     }
+       /* .navbar-toggle {
+        position: relative;
+        float: left;
+        margin-right: 15px;
+        padding: 11px 10px;
+        margin-top: 9px;
+        margin-bottom: 8px;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        border-color: #ddd;
+    }
+    .navbar-toggle .icon-bar:first-child {
+        margin:0;
+    }
+    .navbar-toggle .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #888;
+        margin-top:4px;
+    }
+    .navbar-toggle:hover {
+        cursor: pointer;
+        background:#eee;
+    } */
 </style>
