@@ -297,6 +297,9 @@
     </div>
 </template>
 <script>
+import Vue from 'vue'
+// import myPlugins from 'v-tooltip'
+// Vue.use(VTooltip)
   import myHeader from '../components/myHeader.vue'
   export default {
     head:{
